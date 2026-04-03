@@ -61,7 +61,7 @@ export default function ResultsContent({ initialResults }: ResultsContentProps) 
   return (
     <div className="overflow-hidden">
       {screen === 0 && <BreakdownScreen hours={hours} gameCount={gameCount} source={source} topGames={topGames} onNext={() => setScreen(1)} />}
-      {screen === 1 && <RevealScreen hours={hours} autoSkills={autoSkills} onPrev={() => setScreen(0)} onBuild={() => setScreen(2)} />}
+      {screen === 1 && <RevealScreen hours={hours} autoSkills={unlocked.length > 0 ? unlocked : autoSkills} onPrev={() => setScreen(0)} onBuild={() => setScreen(2)} />}
       {screen === 2 && (
         <AllocatorScreen
           hours={hours}
