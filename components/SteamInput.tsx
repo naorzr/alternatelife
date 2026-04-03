@@ -44,7 +44,7 @@ export default function SteamInput() {
       const params = new URLSearchParams({
         hours: String(data.totalHours),
         games: String(data.gameCount),
-        topGames: JSON.stringify(data.topGames.slice(0, 5)),
+        topGames: JSON.stringify(data.topGames.slice(0, 10)),
         source: "steam",
       });
 
@@ -61,7 +61,7 @@ export default function SteamInput() {
 
   return (
     <div className="animate-fade-up delay-700">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-2 md:gap-4">
         <label className="font-display text-[9px] md:text-[10px] text-accent tracking-wider">
           STEAM PROFILE
         </label>
@@ -76,13 +76,13 @@ export default function SteamInput() {
             }}
             placeholder="Steam ID, vanity URL, or profile link"
             disabled={loading}
-            className="flex-1 h-14 px-4 bg-surface border border-border text-foreground placeholder:text-muted/50 font-body text-2xl focus:outline-none input-glow transition-all disabled:opacity-40"
+            className="flex-1 h-11 md:h-14 px-4 bg-surface border border-border text-foreground placeholder:text-muted/50 font-body text-lg md:text-2xl focus:outline-none input-glow transition-all disabled:opacity-40"
           />
 
           <button
             type="submit"
             disabled={loading || !input.trim()}
-            className="h-14 px-6 bg-accent text-background font-display text-[9px] md:text-[10px] tracking-wider transition-all hover:bg-[#e6c200] active:scale-[0.97] disabled:opacity-25 disabled:cursor-not-allowed whitespace-nowrap"
+            className="h-11 md:h-14 px-6 bg-accent text-background font-display text-[9px] md:text-[10px] tracking-wider transition-all hover:bg-[#e6c200] active:scale-[0.97] disabled:opacity-25 disabled:cursor-not-allowed whitespace-nowrap"
           >
             {loading ? (
               <span className="flex items-center gap-2">
@@ -107,7 +107,7 @@ export default function SteamInput() {
           </div>
         )}
 
-        <p className="font-body text-lg text-muted/60">
+        <p className="hidden md:block font-body text-lg text-muted">
           Paste your Steam ID, vanity URL, or full profile link. Game details
           must be public.
         </p>

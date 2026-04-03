@@ -15,24 +15,32 @@
 }
 
 :root {
-  --background: #0a0a12;
-  --foreground: #f2f0ff;
-  --surface: #12121e;
+  --background: #13121d;
+  --foreground: #ffffff;
+  --surface: #1c1b2a;
   --accent: #ffcc00;
   --neon: #00ff88;
   --pink: #ff3366;
   --cyan: #00ccff;
-  --muted: #9090b0;
-  --border-color: rgba(255, 204, 0, 0.1);
+  --muted: #b8b5d0;
+  --border-color: rgba(255, 204, 0, 0.12);
 }
 
 /* ═══ Base ═══ */
+
+html {
+  overflow-x: hidden;
+}
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-terminal), "Courier New", monospace;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
 }
 
 /* CRT vignette */
@@ -44,8 +52,8 @@ body::before {
   pointer-events: none;
   background: radial-gradient(
     ellipse at center,
-    transparent 50%,
-    rgba(0, 0, 0, 0.4) 100%
+    transparent 60%,
+    rgba(0, 0, 0, 0.25) 100%
   );
 }
 
@@ -60,8 +68,8 @@ body::after {
     0deg,
     transparent 0px,
     transparent 2px,
-    rgba(0, 0, 0, 0.035) 2px,
-    rgba(0, 0, 0, 0.035) 4px
+    rgba(0, 0, 0, 0.02) 2px,
+    rgba(0, 0, 0, 0.02) 4px
   );
 }
 
@@ -130,6 +138,22 @@ body::after {
   100% { background-position: 200% 0; }
 }
 
+@keyframes node-unlock {
+  0% { transform: scale(1); background: rgba(255,255,255,0.8); }
+  40% { transform: scale(1.25); }
+  100% { transform: scale(1); background: transparent; }
+}
+
+@keyframes node-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes float-up-fade {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-24px); }
+}
+
 /* ═══ Animation Classes ═══ */
 
 .animate-fade-up {
@@ -163,6 +187,14 @@ body::after {
   animation: skill-enter 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.node-unlock {
+  animation: node-unlock 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hide scrollbar for stat bar */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
 /* Stagger delays */
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
@@ -178,19 +210,19 @@ body::after {
 
 /* Retro game panel */
 .retro-panel {
-  background: rgba(12, 12, 24, 0.85);
+  background: rgba(19, 18, 29, 0.85);
   border: 1px solid rgba(255, 204, 0, 0.1);
   transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
 }
 
 .retro-panel:hover {
   border-color: rgba(255, 204, 0, 0.18);
-  background: rgba(12, 12, 24, 0.95);
+  background: rgba(19, 18, 29, 0.95);
 }
 
 .retro-panel-active {
   border-color: rgba(255, 204, 0, 0.2);
-  background: rgba(12, 12, 24, 0.95);
+  background: rgba(19, 18, 29, 0.95);
   box-shadow: 0 0 30px rgba(255, 204, 0, 0.03);
 }
 
@@ -217,7 +249,7 @@ body::after {
 /* Ambient glow for hero */
 .hero-glow {
   position: absolute;
-  width: 700px;
+  width: min(700px, 100vw);
   height: 500px;
   top: 50%;
   left: 50%;

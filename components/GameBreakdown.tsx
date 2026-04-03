@@ -48,10 +48,10 @@ export default function GameBreakdown({
               >
                 <div className="flex items-baseline justify-between mb-1">
                   <div className="flex items-center gap-2">
-                    <span className="font-display text-[8px] text-muted/25 tabular-nums w-4 text-right">
+                    <span className="font-display text-[8px] text-muted/50 tabular-nums w-4 text-right">
                       {i + 1}
                     </span>
-                    <span className="font-body text-xl text-foreground/80 truncate max-w-[200px] md:max-w-none">
+                    <span className="font-body text-xl text-foreground truncate max-w-[200px] md:max-w-none">
                       {game.name}
                     </span>
                   </div>
@@ -59,7 +59,7 @@ export default function GameBreakdown({
                     <span className="font-display text-[10px] md:text-[11px] text-foreground tabular-nums tracking-wider">
                       {formatNumber(game.hours)}H
                     </span>
-                    <span className="font-body text-sm text-muted/30">
+                    <span className="font-body text-sm text-muted/60">
                       {pctOfTotal}%
                     </span>
                   </div>

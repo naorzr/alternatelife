@@ -31,31 +31,29 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="min-h-[85vh] flex flex-col justify-center relative">
+    <section className="pt-6 pb-4 md:pt-20 md:pb-12 relative">
       {/* Ambient glow */}
       <div className="hero-glow animate-glow-pulse" />
 
       <div className="relative z-10 max-w-3xl">
         {/* Title */}
-        <div className="animate-fade-up mb-12">
-          <h1 className="font-display text-[clamp(0.8rem,2.5vw,1.3rem)] text-accent tracking-wider glow-accent">
+        <div className="animate-fade-up mb-3 md:mb-10">
+          <h1 className="font-display text-[8px] md:text-[clamp(0.8rem,2.5vw,1.3rem)] text-accent tracking-wider glow-accent">
             {">>>"} ALTERNATE LIFE {"<<<"}
           </h1>
         </div>
 
-        {/* Main headline in terminal font */}
-        <div className="animate-fade-up delay-200 mb-10">
-          <p className="font-body text-[clamp(2.2rem,5.5vw,4rem)] text-foreground leading-[1.15] uppercase">
-            What if you spent those
-            <br />
-            hours on{" "}
+        {/* Main headline */}
+        <div className="animate-fade-up delay-200 mb-3 md:mb-8">
+          <p className="font-body text-[clamp(1.4rem,5vw,3.5rem)] text-foreground font-bold leading-[1.15] uppercase">
+            What if you spent those hours on{" "}
             <span className="text-accent glow-accent">something real</span>?
           </p>
         </div>
 
-        {/* Rotating text with terminal prompt */}
-        <div className="animate-fade-up delay-400 mb-14">
-          <p className="font-body text-[clamp(1.4rem,3vw,2rem)] text-foreground/70">
+        {/* Rotating text */}
+        <div className="animate-fade-up delay-400 mb-3 md:mb-10">
+          <p className="font-body text-[clamp(1rem,2.5vw,1.8rem)] text-foreground/80">
             <span className="text-neon glow-neon">{">"}</span>{" "}
             You could be{" "}
             <span
@@ -70,7 +68,7 @@ export default function HeroSection() {
         </div>
 
         {/* Stats teaser */}
-        <div className="animate-fade-up delay-600 flex gap-6 md:gap-10 font-body text-[clamp(1.1rem,1.8vw,1.3rem)] text-foreground/35">
+        <div className="animate-fade-up delay-600 flex gap-4 md:gap-10 font-body text-sm md:text-[clamp(1.1rem,1.8vw,1.3rem)] text-foreground/50">
           <span>70+ skills</span>
           <span className="text-accent/30">·</span>
           <span>7 life stats</span>
