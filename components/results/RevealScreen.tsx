@@ -5,7 +5,7 @@ import type { AchievementMilestone } from "@/lib/achievements-data";
 import { formatNumber } from "@/lib/formatting";
 import { FOCUS_SKILLS } from "@/lib/results/focus-skills";
 import { RESULT_STATS } from "@/lib/results/stats";
-import { buildShareText, getMasteryEstimate } from "@/lib/results/utils";
+import { buildShareText, getMasteryEstimate, getTimeComparisons } from "@/lib/results/utils";
 import BgGrid from "@/components/results/BgGrid";
 import BottomNav from "@/components/results/BottomNav";
 
@@ -28,6 +28,7 @@ export default function RevealScreen({
   const [focusSkill] = useState(
     () => FOCUS_SKILLS[Math.floor(Math.random() * FOCUS_SKILLS.length)]
   );
+  const comparisons = useMemo(() => getTimeComparisons(hours), [hours]);
 
   const grouped = useMemo(() => {
     const groups = new Map<string, { color: string; skills: AchievementMilestone[] }>();
@@ -58,6 +59,63 @@ export default function RevealScreen({
             <p className="font-display text-[9px] tracking-[0.3em] text-accent glow-accent md:text-[10px]">
               WITH {formatNumber(hours)} HOURS YOU COULD HAVE
             </p>
+          </div>
+
+          <div className="retro-panel animate-fade-up delay-200 p-5 md:p-6" style={{ borderColor: "rgba(0, 255, 136, 0.15)" }}>
+            <p className="font-display text-[8px] tracking-[0.2em] text-neon glow-neon md:text-[9px]">
+              IF YOU FOCUSED ON ONE THING
+            </p>
+            <div className="mt-4 flex items-start gap-4">
+              <span className="text-3xl md:text-4xl">{focusSkill.icon}</span>
+              <div className="min-w-0">
+                <p className="break-safe font-body text-lg font-bold leading-tight text-foreground md:text-xl">
+                  {formatNumber(hours)} hours of {focusSkill.name}
+                </p>
+                <p className="mt-1 font-body text-sm readable-muted">would put you in the</p>
+              </div>
+            </div>
+            <div className="mt-4 flex flex-wrap items-end gap-3">
+              <span className="font-display text-[clamp(2rem,6vw,3.5rem)] leading-none text-neon glow-neon">
+                TOP {mastery.percentile}
+              </span>
+              <span className="pb-1 font-display text-[10px] tracking-[0.24em] text-foreground/75 md:text-[12px]">
+                {mastery.label}
+              </span>
+            </div>
+            <p className="mt-3 pretty-wrap font-body text-base text-foreground/75">
+              {focusSkill.hook(hours)}
+            </p>
+            <p className="mt-2 font-body text-sm readable-muted">{mastery.description}</p>
+          </div>
+
+          <div className="animate-fade-up delay-300">
+            <div className="mb-4 flex items-center gap-4">
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-accent/25" />
+              <p className="font-display text-[9px] tracking-[0.3em] text-accent glow-accent md:text-[10px]">
+                OR PUT ANOTHER WAY
+              </p>
+              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-accent/25" />
+            </div>
+            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-4">
+              {comparisons.map((c) => (
+                <div key={c.label} className="retro-panel p-3 text-center">
+                  <span className="text-xl">{c.icon}</span>
+                  <p className="mt-1 font-display text-[clamp(1rem,2.5vw,1.5rem)] text-foreground/85">{c.value}</p>
+                  <p className="font-display text-[7px] tracking-[0.2em] text-accent">{c.label}</p>
+                  <p className="mt-1 font-body text-xs readable-muted">{c.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="animate-fade-up delay-400">
+            <div className="mb-4 flex items-center gap-4">
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent to-neon/25" />
+              <p className="font-display text-[9px] tracking-[0.3em] text-neon glow-neon md:text-[10px]">
+                OR ACQUIRE {autoSkills.length} DIFFERENT SKILLS
+              </p>
+              <div className="h-px flex-1 bg-gradient-to-l from-transparent to-neon/25" />
+            </div>
           </div>
 
           <div className="grid gap-5 xl:grid-cols-[minmax(0,1.35fr)_minmax(18rem,0.8fr)] xl:items-start">
@@ -103,33 +161,6 @@ export default function RevealScreen({
                   </p>
                 </div>
               )}
-
-              <div className="retro-panel animate-fade-up delay-600 p-5 md:p-6" style={{ borderColor: "rgba(0, 255, 136, 0.15)" }}>
-                <p className="font-display text-[8px] tracking-[0.2em] text-neon glow-neon md:text-[9px]">
-                  IF YOU FOCUSED ON ONE THING
-                </p>
-                <div className="mt-4 flex items-start gap-4">
-                  <span className="text-3xl md:text-4xl">{focusSkill.icon}</span>
-                  <div className="min-w-0">
-                    <p className="break-safe font-body text-lg font-bold leading-tight text-foreground md:text-xl">
-                      {formatNumber(hours)} hours of {focusSkill.name}
-                    </p>
-                    <p className="mt-1 font-body text-sm readable-muted">would put you in the</p>
-                  </div>
-                </div>
-                <div className="mt-4 flex flex-wrap items-end gap-3">
-                  <span className="font-display text-[clamp(2rem,6vw,3.5rem)] leading-none text-neon glow-neon">
-                    TOP {mastery.percentile}
-                  </span>
-                  <span className="pb-1 font-display text-[10px] tracking-[0.24em] text-foreground/75 md:text-[12px]">
-                    {mastery.label}
-                  </span>
-                </div>
-                <p className="mt-3 pretty-wrap font-body text-base text-foreground/75">
-                  {focusSkill.hook(hours)}
-                </p>
-                <p className="mt-2 font-body text-sm readable-muted">{mastery.description}</p>
-              </div>
 
               <button onClick={share} className="touch-action animate-fade-up delay-700 w-full border border-accent/40 bg-accent/15 px-5 py-3 font-display text-[8px] tracking-[0.24em] text-accent transition-all hover:border-accent/60 hover:bg-accent/25 active:scale-95 md:text-[9px]">
                 SHARE ON X

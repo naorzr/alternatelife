@@ -38,6 +38,53 @@ export function getMasteryEstimate(hours: number): MasteryEstimate {
   return { percentile: "30%", label: "STARTED", description: "The boring-but-important foundations most people skip." };
 }
 
+export interface TimeComparison {
+  icon: string;
+  value: string;
+  label: string;
+  detail: string;
+}
+
+export function getTimeComparisons(hours: number): TimeComparison[] {
+  const items: TimeComparison[] = [];
+
+  const earned = Math.round(hours * 35);
+  items.push({ icon: "💰", value: `$${formatNumber(earned)}`, label: "EARNED", detail: "freelancing at $35/hr" });
+
+  const books = Math.floor(hours / 7);
+  if (books >= 1) items.push({ icon: "📚", value: formatNumber(books), label: "BOOKS READ", detail: "cover to cover" });
+
+  const countries = Math.floor(hours / 72);
+  if (countries >= 1) {
+    const detail = countries >= 195 ? "every country on Earth" : "spending 3 days each";
+    items.push({ icon: "🌍", value: formatNumber(countries), label: countries === 1 ? "COUNTRY VISITED" : "COUNTRIES VISITED", detail });
+  }
+
+  const gymMonths = Math.floor(hours / 30);
+  if (gymMonths >= 1) {
+    const gymYears = Math.floor(hours / 365);
+    if (gymYears >= 1) {
+      items.push({ icon: "🏋️", value: String(gymYears), label: gymYears === 1 ? "YEAR" : "YEARS", detail: "of daily workouts" });
+    } else {
+      items.push({ icon: "🏋️", value: String(gymMonths), label: gymMonths === 1 ? "MONTH" : "MONTHS", detail: "of daily workouts" });
+    }
+  }
+
+  const langs = Math.floor(hours / 600);
+  if (langs >= 1) items.push({ icon: "🗣️", value: String(langs), label: langs === 1 ? "LANGUAGE" : "LANGUAGES", detail: "to conversational fluency" });
+
+  const careers = Math.floor(hours / 1000);
+  if (careers >= 1) items.push({ icon: "💻", value: String(careers), label: careers === 1 ? "NEW CAREER" : "NEW CAREERS", detail: "from zero to job-ready" });
+
+  const instruments = Math.floor(hours / 2000);
+  if (instruments >= 1) items.push({ icon: "🎵", value: String(instruments), label: instruments === 1 ? "INSTRUMENT" : "INSTRUMENTS", detail: "to performance level" });
+
+  const degrees = Math.floor(hours / 1800);
+  if (degrees >= 1) items.push({ icon: "🎓", value: String(degrees), label: degrees === 1 ? "DEGREE" : "DEGREES", detail: "worth of college study" });
+
+  return items.slice(0, 8);
+}
+
 export function buildShareText(
   hours: number,
   skillCount: number,
