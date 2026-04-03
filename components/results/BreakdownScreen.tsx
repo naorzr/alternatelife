@@ -55,7 +55,7 @@ export default function BreakdownScreen({
 
           <p className="animate-fade-up delay-500 pretty-wrap font-body text-base readable-muted md:text-lg">
             {source === "steam"
-              ? "That's a lot of hours. Let's see what you could've done instead."
+              ? "That's a lot of hours. So what could they have been?"
               : "What could you have done with all that time?"}
           </p>
         </div>

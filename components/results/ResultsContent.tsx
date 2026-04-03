@@ -94,7 +94,7 @@ function ResultsErrorState() {
         <p className="mb-6 font-display text-[12px] text-pink glow-text">ERROR</p>
         <p className="mb-3 font-body text-xl font-bold text-foreground">NO HOURS TO SPEND</p>
         <p className="mb-8 font-body text-base readable-muted">
-          We need some gaming hours to work with. Head back and enter your profile or hours.
+          Nothing to work with here. Head to the start and drop in your hours or Steam profile.
         </p>
         <Link href="/" className="touch-action inline-flex bg-accent px-6 py-3 font-display text-[10px] tracking-[0.24em] text-background transition-colors hover:bg-[#e6c200]">
           {"<<"} GO BACK

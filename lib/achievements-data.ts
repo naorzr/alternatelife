@@ -121,7 +121,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 350,
     category: "fitness",
     icon: "🏋️‍♂️",
-    roastLine: "Your body could've been the ultimate weapon. Instead you bought skins.",
+    roastLine: "You maxed out a fictional character. Your actual body is still on the tutorial.",
   },
 
   // ── SKILLS ───────────────────────────────────────
@@ -179,7 +179,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 40,
     category: "skills",
     icon: "🤿",
-    roastLine: "Explore the ocean floor instead of the depths of your MMR.",
+    roastLine: "The ocean floor is deeper than your MMR. And way more interesting.",
   },
   {
     id: "woodworking",
@@ -219,7 +219,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 100,
     category: "skills",
     icon: "🎤",
-    roastLine: "You've flamed teammates for years. Channel that energy constructively.",
+    roastLine: "You've been yelling at strangers online for years. Same skill, different audience.",
   },
   {
     id: "chess-mastery",
@@ -259,7 +259,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 200,
     category: "skills",
     icon: "🔥",
-    roastLine: "Forge metal instead of forging ahead to another loss.",
+    roastLine: "Loud, hot, and you walk away with something real.",
   },
   {
     id: "sign-language",
@@ -275,7 +275,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 150,
     category: "skills",
     icon: "🧵",
-    roastLine: "Design real outfits instead of buying character skins.",
+    roastLine: "Your wardrobe budget went to pixels. Actual fabric was right there.",
   },
   {
     id: "car-mechanic",
@@ -415,7 +415,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 500,
     category: "education",
     icon: "🧠",
-    roastLine: "Train neural networks instead of training your MMR downward.",
+    roastLine: "Your GPU was right there this whole time, doing nothing useful.",
   },
   {
     id: "history-deep-dive",
@@ -457,7 +457,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 100,
     category: "creative",
     icon: "🏺",
-    roastLine: "Shape clay instead of letting ranked shape your mental health.",
+    roastLine: "Cheaper than therapy and you get a mug out of it.",
   },
   {
     id: "music-production",
@@ -489,7 +489,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 250,
     category: "creative",
     icon: "🧁",
-    roastLine: "Sweet skills > sweet rank badge.",
+    roastLine: "Nobody at a dinner party has ever asked about your rank badge.",
   },
   {
     id: "tattooing",
@@ -497,7 +497,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 500,
     category: "creative",
     icon: "💉",
-    roastLine: "Permanent ink on skin > permanent stain on your match history.",
+    roastLine: "At least a bad tattoo starts a conversation.",
   },
   {
     id: "animation",
@@ -505,7 +505,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 400,
     category: "creative",
     icon: "🎞️",
-    roastLine: "Animate your own characters instead of watching them die in-game.",
+    roastLine: "Your characters could live. On your terms.",
   },
   {
     id: "leatherworking",
@@ -513,7 +513,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 150,
     category: "creative",
     icon: "👜",
-    roastLine: "Craft real gear instead of virtual gear.",
+    roastLine: "A handmade leather wallet beats a legendary drop. Fight me.",
   },
   {
     id: "graphic-design",
@@ -521,7 +521,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 400,
     category: "creative",
     icon: "🎨",
-    roastLine: "Design logos people pay for instead of flaming your team's logo.",
+    roastLine: "People pay real money for good design. Just saying.",
   },
   {
     id: "singing",
@@ -529,7 +529,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 200,
     category: "creative",
     icon: "🎵",
-    roastLine: "Belt out karaoke instead of yelling callouts nobody listens to.",
+    roastLine: "Same energy as yelling callouts. Way better reception.",
   },
 
   // ── SOCIAL & ADVENTURE ──────────────────────────
@@ -587,7 +587,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 250,
     category: "social",
     icon: "🐕",
-    roastLine: "Unconditional love > conditional ranked queue.",
+    roastLine: "A dog loves you even after a 10-game loss streak. Can your duo say that?",
   },
   {
     id: "stand-up",
@@ -611,7 +611,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 80,
     category: "adventure",
     icon: "🏂",
-    roastLine: "Shred mountains instead of shredding your MMR.",
+    roastLine: "No ranking system on a powder day. That's the whole point.",
   },
   {
     id: "scuba-advanced",
@@ -635,7 +635,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 100,
     category: "adventure",
     icon: "🏕️",
-    roastLine: "Survive in the wild instead of barely surviving in lane.",
+    roastLine: "Can't blame lag when a bear shows up.",
   },
   {
     id: "dance",
@@ -667,7 +667,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 60,
     category: "adventure",
     icon: "🪁",
-    roastLine: "Fly through the sky instead of flying off the handle in voice chat.",
+    roastLine: "Way better adrenaline than screaming about your Hanzo pick.",
   },
   {
     id: "marathon-swimming",
@@ -675,6 +675,6 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 300,
     category: "adventure",
     icon: "🌊",
-    roastLine: "Cross a body of water instead of crossing your team.",
+    roastLine: "Open water. No teammates. Just you and the current.",
   },
 ];

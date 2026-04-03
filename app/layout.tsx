@@ -19,7 +19,7 @@ const spaceMono = Space_Mono({
 export const metadata: Metadata = {
   title: "Alternate Life — What if you'd spent those hours differently?",
   description:
-    "Enter your gaming hours. See the alternate version of yourself — the one who spent those hours building real skills.",
+    "Enter your gaming hours and see what you could have been. 70+ skills, 7 stats, one question.",
   openGraph: {
     title: "Alternate Life",
     description:

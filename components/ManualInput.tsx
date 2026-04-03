@@ -80,7 +80,7 @@ export default function ManualInput() {
         </div>
 
         <p id="manual-hours-help" className="font-body text-sm readable-muted">
-          Enter the total hours you want to convert into an alternate build.
+          How many hours are we working with?
         </p>
 
         <button

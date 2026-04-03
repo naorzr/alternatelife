@@ -59,7 +59,7 @@ export default function Home() {
             ALTERNATE LIFE
           </span>
           <span className="font-body text-xs md:text-sm readable-muted">
-            YOUR HOURS. YOUR BUILD. YOUR CALL.
+            Your hours. You decide.
           </span>
         </div>
       </footer>
