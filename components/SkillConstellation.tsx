@@ -39,22 +39,21 @@ export default function SkillConstellation({
 
   return (
     <div className="animate-fade-in">
-      {/* Stat header */}
-      <div className="flex items-center justify-between mb-5">
-        <div>
+      <div className="mb-5 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+        <div className="min-w-0">
           <h2
-            className="font-display text-[14px] md:text-[18px] tracking-wider glow-text"
+            className="font-display text-[14px] md:text-[18px] tracking-[0.22em] glow-text"
             style={{ color: statColor }}
           >
             {statLabel.toUpperCase()}
           </h2>
-          <p className="font-body text-base md:text-lg text-foreground/55 mt-0.5">
+          <p className="mt-1 break-safe font-body text-sm md:text-base readable-muted">
             {statDesc}
           </p>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-3">
           <span
-            className="font-display text-[10px] md:text-[12px] tabular-nums tracking-wider"
+            className="font-display text-[10px] md:text-[12px] tabular-nums tracking-[0.18em]"
             style={{ color: `${statColor}90` }}
           >
             LV.{level}
@@ -63,7 +62,8 @@ export default function SkillConstellation({
           <button
             onClick={onLevelUp}
             disabled={!canLevelUp}
-            className={`px-4 py-2 border font-display text-[8px] md:text-[9px] tracking-wider transition-all duration-200 ${
+            data-testid="allocator-level-up"
+            className={`touch-action px-4 py-2 border font-display text-[8px] md:text-[9px] tracking-[0.2em] transition-all duration-200 ${
               canLevelUp
                 ? "cursor-pointer hover:scale-105 active:scale-95"
                 : "opacity-20 cursor-not-allowed"
@@ -86,8 +86,10 @@ export default function SkillConstellation({
         </div>
       </div>
 
-      {/* Skills grid — multi-column rows */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px]" style={{ background: `${statColor}08` }}>
+      <div
+        className="grid grid-cols-1 gap-[1px] md:grid-cols-2"
+        style={{ background: `${statColor}08` }}
+      >
         {sorted.map((skill) => {
           const isUnlocked = unlockedIds.has(skill.id);
           const isAffordable = !isUnlocked && skill.hoursRequired <= remaining;
@@ -101,7 +103,8 @@ export default function SkillConstellation({
                 if (isUnlocked || isAffordable) onToggle(skill);
               }}
               disabled={isLocked}
-              className={`group flex items-center gap-3 px-3 py-2.5 md:px-4 md:py-3 text-left transition-all duration-200 ${
+              data-testid="allocator-skill-button"
+              className={`group grid min-h-18 grid-cols-[auto_minmax(0,1fr)_auto_auto] items-start gap-3 px-3 py-3 md:px-4 text-left transition-all duration-200 ${
                 isUnlocked
                   ? "cursor-pointer"
                   : isAffordable
@@ -114,7 +117,6 @@ export default function SkillConstellation({
                   : "rgba(19, 18, 29, 0.9)",
               }}
             >
-              {/* Icon */}
               <span
                 className={`text-lg md:text-xl leading-none shrink-0 transition-all duration-300 ${
                   isUnlocked
@@ -127,29 +129,28 @@ export default function SkillConstellation({
                 {skill.icon}
               </span>
 
-              {/* Title + roast */}
               <div className="flex-1 min-w-0">
                 <span
-                  className={`font-body text-base md:text-lg leading-tight block truncate transition-colors duration-200 ${
+                  className={`break-safe font-body text-base md:text-lg leading-tight block transition-colors duration-200 ${
                     isUnlocked
                       ? "text-foreground"
                       : isAffordable
                         ? "text-foreground/70"
                         : "text-foreground/25"
                   }`}
+                  data-testid="allocator-skill-title"
                 >
                   {skill.title}
                 </span>
                 {isUnlocked && (
-                  <span className="font-body text-xs md:text-sm text-foreground/35 block truncate mt-0.5">
+                  <span className="mt-1 block break-safe font-body text-xs md:text-sm readable-muted">
                     &quot;{skill.roastLine}&quot;
                   </span>
                 )}
               </div>
 
-              {/* Cost */}
               <span
-                className="font-display text-[8px] md:text-[9px] tabular-nums tracking-wider shrink-0"
+                className="pt-0.5 font-display text-[8px] md:text-[9px] tabular-nums tracking-[0.18em] shrink-0"
                 style={{
                   color: isUnlocked
                     ? statColor
@@ -161,8 +162,7 @@ export default function SkillConstellation({
                 {skill.hoursRequired}H
               </span>
 
-              {/* Status indicator */}
-              <span className="w-5 text-center shrink-0">
+              <span className="w-5 pt-0.5 text-center shrink-0">
                 {isUnlocked ? (
                   <span
                     className="font-display text-[8px]"

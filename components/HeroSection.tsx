@@ -31,33 +31,33 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="pt-6 pb-4 md:pt-20 md:pb-12 relative">
+    <section className="relative py-4 md:py-8 lg:py-10">
       {/* Ambient glow */}
       <div className="hero-glow animate-glow-pulse" />
 
       <div className="relative z-10 max-w-3xl">
         {/* Title */}
-        <div className="animate-fade-up mb-3 md:mb-10">
-          <h1 className="font-display text-[8px] md:text-[clamp(0.8rem,2.5vw,1.3rem)] text-accent tracking-wider glow-accent">
+        <div className="animate-fade-up mb-3 md:mb-6">
+          <h1 className="font-display text-[8px] md:text-[clamp(0.8rem,2vw,1.1rem)] text-accent tracking-[0.24em] glow-accent">
             {">>>"} ALTERNATE LIFE {"<<<"}
           </h1>
         </div>
 
         {/* Main headline */}
-        <div className="animate-fade-up delay-200 mb-3 md:mb-8">
-          <p className="font-body text-[clamp(1.4rem,5vw,3.5rem)] text-foreground font-bold leading-[1.15] uppercase">
+        <div className="animate-fade-up delay-200 mb-3 md:mb-6">
+          <p className="balanced-wrap font-body text-[clamp(1.55rem,5.2vw,3.85rem)] text-foreground font-bold leading-[1.08] uppercase">
             What if you spent those hours on{" "}
             <span className="text-accent glow-accent">something real</span>?
           </p>
         </div>
 
         {/* Rotating text */}
-        <div className="animate-fade-up delay-400 mb-3 md:mb-10">
-          <p className="font-body text-[clamp(1rem,2.5vw,1.8rem)] text-foreground/80">
+        <div className="animate-fade-up delay-400 mb-4 md:mb-6">
+          <p className="pretty-wrap font-body text-[clamp(1rem,2.25vw,1.65rem)] text-foreground/85 leading-relaxed">
             <span className="text-neon glow-neon">{">"}</span>{" "}
             You could be{" "}
             <span
-              className={`inline-block text-neon transition-all duration-250 ${
+              className={`inline text-neon transition-all duration-250 ${
                 visible ? "opacity-100" : "opacity-0"
               }`}
             >
@@ -68,7 +68,7 @@ export default function HeroSection() {
         </div>
 
         {/* Stats teaser */}
-        <div className="animate-fade-up delay-600 flex gap-4 md:gap-10 font-body text-sm md:text-[clamp(1.1rem,1.8vw,1.3rem)] text-foreground/50">
+        <div className="animate-fade-up delay-600 flex flex-wrap gap-x-4 gap-y-2 font-body text-sm md:text-lg text-foreground/65">
           <span>70+ skills</span>
           <span className="text-accent/30">·</span>
           <span>7 life stats</span>

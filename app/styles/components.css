@@ -1,0 +1,51 @@
+.retro-panel {
+  background: rgba(19, 18, 29, 0.85);
+  border: 1px solid rgba(255, 204, 0, 0.1);
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+
+.retro-panel:hover {
+  border-color: rgba(255, 204, 0, 0.18);
+  background: rgba(19, 18, 29, 0.95);
+}
+
+.retro-panel-active {
+  border-color: rgba(255, 204, 0, 0.2);
+  background: rgba(19, 18, 29, 0.95);
+  box-shadow: 0 0 30px rgba(255, 204, 0, 0.03);
+}
+
+.input-glow:focus {
+  box-shadow: 0 0 0 1px rgba(255, 204, 0, 0.25), 0 0 20px rgba(255, 204, 0, 0.06);
+}
+
+.glow-text { text-shadow: 0 0 8px currentColor, 0 0 16px currentColor; }
+.glow-accent { text-shadow: 0 0 12px var(--accent), 0 0 30px rgba(255, 204, 0, 0.15); }
+.glow-neon { text-shadow: 0 0 8px var(--neon), 0 0 20px rgba(0, 255, 136, 0.15); }
+
+.hero-glow {
+  position: absolute;
+  width: min(700px, 100vw);
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  background: radial-gradient(ellipse at center, rgba(255, 204, 0, 0.05) 0%, rgba(255, 204, 0, 0.015) 40%, transparent 70%);
+  pointer-events: none;
+}
+
+.retro-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 204, 0, 0.15), transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -25,7 +25,7 @@ export default function GameBreakdown({
   return (
     <div className="animate-fade-up delay-300">
       <div className="flex items-center gap-3 mb-5">
-        <span className="font-display text-[8px] md:text-[9px] text-accent tracking-wider glow-accent">
+        <span className="font-display text-[8px] md:text-[9px] text-accent tracking-[0.24em] glow-accent">
           TOP GAMES
         </span>
         <div className="flex-1 retro-divider" />
@@ -41,31 +41,35 @@ export default function GameBreakdown({
             return (
               <div
                 key={game.appid}
+                data-testid="game-breakdown-row"
                 style={{
                   animation: `fade-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) ${250 + i * 70}ms forwards`,
                   opacity: 0,
                 }}
               >
-                <div className="flex items-baseline justify-between mb-1">
-                  <div className="flex items-center gap-2">
-                    <span className="font-display text-[8px] text-muted/50 tabular-nums w-4 text-right">
+                <div className="mb-1 grid grid-cols-[auto_minmax(0,1fr)_auto] items-start gap-2">
+                  <div className="flex items-start gap-2 min-w-0">
+                    <span className="mt-0.5 font-display text-[8px] text-muted/50 tabular-nums w-4 text-right">
                       {i + 1}
                     </span>
-                    <span className="font-body text-xl text-foreground truncate max-w-[200px] md:max-w-none">
+                    <span
+                      className="break-safe font-body text-base md:text-lg text-foreground leading-snug"
+                      data-testid="game-title"
+                    >
                       {game.name}
                     </span>
                   </div>
-                  <div className="flex items-baseline gap-2 shrink-0 ml-3">
-                    <span className="font-display text-[10px] md:text-[11px] text-foreground tabular-nums tracking-wider">
+                  <div />
+                  <div className="flex items-baseline gap-2 shrink-0 ml-2">
+                    <span className="font-display text-[10px] md:text-[11px] text-foreground tabular-nums tracking-[0.18em]">
                       {formatNumber(game.hours)}H
                     </span>
-                    <span className="font-body text-sm text-muted/60">
+                    <span className="font-body text-sm readable-muted">
                       {pctOfTotal}%
                     </span>
                   </div>
                 </div>
 
-                {/* Discrete block bar */}
                 <div className="flex gap-[2px] ml-6">
                   {Array.from({ length: blocks }).map((_, j) => (
                     <div
@@ -92,11 +96,11 @@ export default function GameBreakdown({
         </div>
 
         <div className="mt-5 pt-4 border-t border-accent/8 flex items-baseline justify-between">
-          <span className="font-display text-[8px] text-muted/30 tracking-wider">
+          <span className="font-display text-[8px] text-muted/40 tracking-[0.22em]">
             TOTAL
           </span>
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-[13px] md:text-[15px] text-accent tabular-nums tracking-wider glow-accent">
+            <span className="font-display text-[13px] md:text-[15px] text-accent tabular-nums tracking-[0.18em] glow-accent">
               {formatNumber(totalHours)}H
             </span>
           </div>

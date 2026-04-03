@@ -4,9 +4,12 @@ import ManualInput from "@/components/ManualInput";
 
 export default function Home() {
   return (
-    <div className="h-dvh md:h-auto md:min-h-dvh flex flex-col overflow-hidden md:overflow-visible relative">
+    <div className="viewport-shell overflow-hidden" data-testid="home-screen">
       {/* Background grid */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+      <div
+        className="fixed inset-0 pointer-events-none overflow-hidden"
+        data-testid="bg-grid"
+      >
         <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
@@ -22,35 +25,40 @@ export default function Home() {
         <div className="absolute top-0 right-0 h-px w-40 bg-gradient-to-l from-accent/20 to-transparent" />
       </div>
 
-      <main className="relative z-10 flex-1 overflow-hidden md:overflow-visible max-w-3xl mx-auto w-full px-5 md:px-6 flex flex-col justify-evenly md:justify-start">
-        <HeroSection />
+      <main
+        id="main-content"
+        className="viewport-main relative z-10 justify-center safe-pad-top safe-pad-bottom"
+      >
+        <div className="viewport-frame flex flex-1 items-center">
+          <div className="grid w-full items-center gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(20rem,0.85fr)] lg:gap-10">
+            <HeroSection />
 
-        {/* Input section */}
-        <section className="max-w-xl">
-          <div className="flex flex-col gap-3 md:gap-8">
-            <SteamInput />
+            <section className="w-full max-w-xl justify-self-end">
+              <div className="flex flex-col gap-4 md:gap-6">
+                <SteamInput />
 
-            {/* Divider */}
-            <div className="flex items-center gap-5 animate-fade-up delay-800">
-              <div className="flex-1 retro-divider" />
-              <span className="font-display text-[8px] text-muted/40 tracking-widest">
-                OR
-              </span>
-              <div className="flex-1 retro-divider" />
-            </div>
+                <div className="flex items-center gap-5 animate-fade-up delay-800">
+                  <div className="flex-1 retro-divider" />
+                  <span className="font-display text-[8px] text-muted/50 tracking-[0.35em]">
+                    OR
+                  </span>
+                  <div className="flex-1 retro-divider" />
+                </div>
 
-            <ManualInput />
+                <ManualInput />
+              </div>
+            </section>
           </div>
-        </section>
+        </div>
       </main>
 
       {/* Footer */}
-      <footer className="relative z-10 shrink-0 border-t border-border py-3 px-6">
-        <div className="max-w-3xl mx-auto flex items-center justify-between">
-          <span className="font-display text-[7px] md:text-[8px] text-muted/40 tracking-wider">
+      <footer className="relative z-10 shrink-0 border-t border-border safe-pad-bottom py-3">
+        <div className="viewport-frame flex flex-wrap items-center justify-between gap-2">
+          <span className="font-display text-[7px] md:text-[8px] text-muted/50 tracking-wider">
             ALTERNATE LIFE
           </span>
-          <span className="hidden sm:inline font-body text-sm text-muted/35">
+          <span className="font-body text-xs md:text-sm readable-muted">
             YOUR HOURS. YOUR BUILD. YOUR CALL.
           </span>
         </div>

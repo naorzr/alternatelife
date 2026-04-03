@@ -17,6 +17,7 @@ export default function SteamInput() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loadingMsg, setLoadingMsg] = useState(LOADING_MESSAGES[0]);
+  const inputId = "steam-profile-input";
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -61,13 +62,20 @@ export default function SteamInput() {
 
   return (
     <div className="animate-fade-up delay-700">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-2 md:gap-4">
-        <label className="font-display text-[9px] md:text-[10px] text-accent tracking-wider">
+      <form
+        onSubmit={handleSubmit}
+        className="retro-panel flex flex-col gap-3 p-4 md:gap-4 md:p-5"
+      >
+        <label
+          htmlFor={inputId}
+          className="font-display text-[9px] md:text-[10px] text-accent tracking-[0.28em]"
+        >
           STEAM PROFILE
         </label>
 
         <div className="flex flex-col sm:flex-row gap-3">
           <input
+            id={inputId}
             type="text"
             value={input}
             onChange={(e) => {
@@ -76,13 +84,16 @@ export default function SteamInput() {
             }}
             placeholder="Steam ID, vanity URL, or profile link"
             disabled={loading}
-            className="flex-1 h-11 md:h-14 px-4 bg-surface border border-border text-foreground placeholder:text-muted/50 font-body text-lg md:text-2xl focus:outline-none input-glow transition-all disabled:opacity-40"
+            aria-describedby="steam-profile-help steam-profile-error"
+            data-testid="steam-profile-input"
+            className="touch-action flex-1 h-12 md:h-14 min-w-0 px-4 bg-surface border border-border text-foreground placeholder:text-muted/70 font-body text-base md:text-xl focus:outline-none input-glow transition-all disabled:opacity-40"
           />
 
           <button
             type="submit"
             disabled={loading || !input.trim()}
-            className="h-11 md:h-14 px-6 bg-accent text-background font-display text-[9px] md:text-[10px] tracking-wider transition-all hover:bg-[#e6c200] active:scale-[0.97] disabled:opacity-25 disabled:cursor-not-allowed whitespace-nowrap"
+            data-testid="steam-submit"
+            className="touch-action h-12 md:h-14 px-5 md:px-6 bg-accent text-background font-display text-[9px] md:text-[10px] tracking-[0.22em] transition-all hover:bg-[#e6c200] active:scale-[0.97] disabled:opacity-25 disabled:cursor-not-allowed whitespace-nowrap"
           >
             {loading ? (
               <span className="flex items-center gap-2">
@@ -96,18 +107,31 @@ export default function SteamInput() {
         </div>
 
         {loading && (
-          <p className="font-body text-lg text-accent/50 animate-fade-in">
+          <p
+            className="font-body text-sm md:text-base text-accent/80 animate-fade-in"
+            aria-live="polite"
+          >
             {loadingMsg}
           </p>
         )}
 
         {error && (
-          <div className="p-3 border border-pink/30 bg-pink/5">
-            <p className="font-body text-lg text-pink">{error}</p>
+          <div
+            id="steam-profile-error"
+            className="p-3 border border-pink/40 bg-pink/10"
+            aria-live="polite"
+            data-testid="steam-error"
+          >
+            <p className="font-body text-sm md:text-base text-pink break-safe">
+              {error}
+            </p>
           </div>
         )}
 
-        <p className="hidden md:block font-body text-lg text-muted">
+        <p
+          id="steam-profile-help"
+          className="font-body text-sm md:text-base readable-muted"
+        >
           Paste your Steam ID, vanity URL, or full profile link. Game details
           must be public.
         </p>
