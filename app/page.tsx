@@ -1,3 +1,4 @@
+import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 import SteamInput from "@/components/SteamInput";
 import ManualInput from "@/components/ManualInput";
@@ -58,9 +59,14 @@ export default function Home() {
           <span className="font-display text-[7px] md:text-[8px] text-muted/50 tracking-wider">
             ALTERNATE LIFE
           </span>
-          <span className="font-body text-xs md:text-sm readable-muted">
-            Your hours. You decide.
-          </span>
+          <div className="flex items-center gap-3">
+            <Link href="/privacy" className="font-body text-xs readable-muted hover:text-foreground transition-colors">
+              Privacy
+            </Link>
+            <Link href="/terms" className="font-body text-xs readable-muted hover:text-foreground transition-colors">
+              Terms
+            </Link>
+          </div>
         </div>
       </footer>
     </div>

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { AchievementMilestone } from "@/lib/achievements-data";
-import { formatNumber } from "@/lib/formatting";
+import { formatNumber, pluralize } from "@/lib/formatting";
 import { FOCUS_SKILLS } from "@/lib/results/focus-skills";
 import { RESULT_STATS } from "@/lib/results/stats";
 import { buildShareText, getMasteryEstimate, getTimeComparisons } from "@/lib/results/utils";
@@ -42,12 +42,21 @@ export default function RevealScreen({
     return Array.from(groups.entries());
   }, [autoSkills]);
 
+  const [copied, setCopied] = useState(false);
+
   const share = () => {
     const text = buildShareText(hours, autoSkills.length, remaining, mastery.percentile);
+    const url = window.location.href;
     window.open(
-      `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`,
+      `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
       "_blank"
     );
+  };
+
+  const copyLink = async () => {
+    await navigator.clipboard.writeText(window.location.href);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -157,13 +166,18 @@ export default function RevealScreen({
                     {formatNumber(remaining)}H LEFT
                   </p>
                   <p className="mt-2 font-body text-sm readable-muted">
-                    Another {(remaining / 24).toFixed(0)} days to spend somewhere else.
+                    {Math.round(remaining / 24) < 1
+                      ? "Less than a day"
+                      : `Another ${pluralize(Math.round(remaining / 24), "day")}`} to spend somewhere else.
                   </p>
                 </div>
               )}
 
               <button onClick={share} className="touch-action animate-fade-up delay-700 w-full border border-accent/40 bg-accent/15 px-5 py-3 font-display text-[8px] tracking-[0.24em] text-accent transition-all hover:border-accent/60 hover:bg-accent/25 active:scale-95 md:text-[9px]">
                 SHARE ON X
+              </button>
+              <button onClick={copyLink} className="touch-action animate-fade-up delay-800 w-full border border-white/20 bg-white/[0.06] px-5 py-3 font-display text-[8px] tracking-[0.24em] text-foreground/70 transition-all hover:border-white/30 hover:bg-white/[0.1] hover:text-foreground active:scale-95 md:text-[9px]">
+                {copied ? "COPIED!" : "COPY LINK"}
               </button>
             </aside>
           </div>
