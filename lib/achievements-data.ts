@@ -25,7 +25,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 400,
     category: "fitness",
     icon: "💪",
-    roastLine: "Your character is maxed out. You? Still base stats.",
+    roastLine: "Your in-game character has better stats than you and it doesn't even eat.",
   },
   {
     id: "get-six-pack",
@@ -41,7 +41,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 200,
     category: "fitness",
     icon: "🏃",
-    roastLine: "You've run from enough teamfights. Might as well make it official.",
+    roastLine: "All that cardio dodging skill shots and you're still winded going up stairs.",
   },
   {
     id: "learn-swimming",
@@ -49,7 +49,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 50,
     category: "fitness",
     icon: "🏊",
-    roastLine: "You've been drowning in ranked. At least this drowning is fixable.",
+    roastLine: "You've been drowning in ranked for years. At least in a pool there's a shallow end.",
   },
   {
     id: "meditation",
@@ -57,7 +57,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 300,
     category: "fitness",
     icon: "🧘",
-    roastLine: "Inner peace > Inner rage at your ranked teammates.",
+    roastLine: "300 hours of sitting still and you'd come out calm instead of tilted.",
   },
   {
     id: "yoga-mastery",
@@ -65,7 +65,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 500,
     category: "fitness",
     icon: "🧎",
-    roastLine: "Your posture from gaming would've been fixed 480 hours ago.",
+    roastLine: "Your spine has been filing complaints since hour 200.",
   },
   {
     id: "martial-arts",
@@ -73,7 +73,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 150,
     category: "fitness",
     icon: "🥋",
-    roastLine: "You could actually fight, not just pick fighters in a game.",
+    roastLine: "150 hours in a dojo and you'd be dangerous for real. Not just in character select.",
   },
   {
     id: "climb-kilimanjaro",
@@ -81,7 +81,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 250,
     category: "fitness",
     icon: "🏔️",
-    roastLine: "Peak gaming → actual peak. 5,895m of 'what if.'",
+    roastLine: "5,895 meters above sea level. Your MMR never climbed that high.",
   },
   {
     id: "triathlon",
@@ -97,7 +97,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 100,
     category: "fitness",
     icon: "🤸",
-    roastLine: "Flip your world upside down. Literally.",
+    roastLine: "100 hours and you'd be doing handstands at parties. More impressive than your match history.",
   },
   {
     id: "boxing",
@@ -105,7 +105,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 250,
     category: "fitness",
     icon: "🥊",
-    roastLine: "Hit something that isn't your keyboard for once.",
+    roastLine: "All that desk slamming finally put to good use.",
   },
   {
     id: "splits",
@@ -121,7 +121,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 350,
     category: "fitness",
     icon: "🏋️‍♂️",
-    roastLine: "You maxed out a fictional character. Your actual body is still on the tutorial.",
+    roastLine: "You've got the grind mentality. Your body's just been waiting for you to use it.",
   },
 
   // ── SKILLS ───────────────────────────────────────
@@ -139,7 +139,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 150,
     category: "skills",
     icon: "🎸",
-    roastLine: "Instead of being the Pudge main, you'd be the one everyone wants at parties.",
+    roastLine: "Everyone at the campfire would be asking you to play. Pudge hooks don't impress anyone outdoors.",
   },
   {
     id: "learn-piano",
@@ -147,7 +147,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 500,
     category: "skills",
     icon: "🎹",
-    roastLine: "Instead of mashing QWER, you could've been playing Chopin.",
+    roastLine: "Your fingers are fast enough from gaming. Imagine what they'd sound like on a piano.",
   },
   {
     id: "learn-photography",
@@ -155,7 +155,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 300,
     category: "skills",
     icon: "📷",
-    roastLine: "Your screenshots folder is massive. Imagine if those were actual good photos.",
+    roastLine: "Your screenshots folder is massive. A camera would've given you ones worth printing.",
   },
   {
     id: "learn-drawing",
@@ -163,7 +163,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 500,
     category: "skills",
     icon: "✏️",
-    roastLine: "You could've drawn your own character skins instead of buying them.",
+    roastLine: "You could've drawn your own character skins by now. From scratch.",
   },
   {
     id: "first-aid",
@@ -171,7 +171,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 20,
     category: "skills",
     icon: "🩹",
-    roastLine: "You can't save your teammates, but you could've saved actual lives.",
+    roastLine: "20 hours. That's it. Someone might owe you their life.",
   },
   {
     id: "scuba-diving",
@@ -195,7 +195,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 100,
     category: "skills",
     icon: "🍸",
-    roastLine: "You'd be the coolest person at every party. Instead, you're in a Discord call.",
+    roastLine: "You'd be making drinks at parties that people talk about. The Discord call can wait.",
   },
   {
     id: "motorcycle-license",
@@ -203,7 +203,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 40,
     category: "skills",
     icon: "🏍️",
-    roastLine: "Vroom vroom > pew pew.",
+    roastLine: "40 hours. That's all it takes. You'd be on two wheels by now.",
   },
   {
     id: "sailing",
@@ -211,7 +211,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 100,
     category: "skills",
     icon: "⛵",
-    roastLine: "Captain of a ranked team → Captain of an actual boat.",
+    roastLine: "You could captain a boat. The ocean doesn't have a surrender vote.",
   },
   {
     id: "public-speaking",
@@ -219,7 +219,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 100,
     category: "skills",
     icon: "🎤",
-    roastLine: "You've been yelling at strangers online for years. Same skill, different audience.",
+    roastLine: "You've been yelling at strangers online for years. Same energy, better audience.",
   },
   {
     id: "chess-mastery",
@@ -243,7 +243,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 50,
     category: "skills",
     icon: "🔓",
-    roastLine: "Unlock doors instead of loot boxes.",
+    roastLine: "Honestly more useful than anything you've ever gotten from a loot box.",
   },
   {
     id: "magic-tricks",
@@ -251,7 +251,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 200,
     category: "skills",
     icon: "🃏",
-    roastLine: "Make things disappear. Like your hours already do, but cooler.",
+    roastLine: "200 hours of card magic and you'd be the most interesting person at any table.",
   },
   {
     id: "welding",
@@ -259,7 +259,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 200,
     category: "skills",
     icon: "🔥",
-    roastLine: "Loud, hot, and you walk away with something real.",
+    roastLine: "Sparks flying, metal bending, and you walk out with something you built. IRL crafting.",
   },
   {
     id: "sign-language",
@@ -267,7 +267,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 200,
     category: "skills",
     icon: "🤟",
-    roastLine: "Communicate without a mic. Revolutionary.",
+    roastLine: "Communicate without a mic. Your teammates wish you would.",
   },
   {
     id: "sewing",
@@ -275,7 +275,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 150,
     category: "skills",
     icon: "🧵",
-    roastLine: "Your wardrobe budget went to pixels. Actual fabric was right there.",
+    roastLine: "You've spent more on skins than clothes. 150 hours and you'd be making your own.",
   },
   {
     id: "car-mechanic",
@@ -283,7 +283,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 100,
     category: "skills",
     icon: "🔧",
-    roastLine: "Fix an engine instead of blaming lag.",
+    roastLine: "Next time your car breaks down you'd fix it yourself. Can't blame lag on a carburetor.",
   },
 
   // ── CAREER & MONEY ──────────────────────────────
@@ -301,7 +301,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 400,
     category: "career",
     icon: "💼",
-    roastLine: "Side income > side quests.",
+    roastLine: "You could be making money on the side by now. Your quest log wouldn't miss you.",
   },
   {
     id: "real-estate-license",
@@ -309,7 +309,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 150,
     category: "career",
     icon: "🏠",
-    roastLine: "You'd be selling houses instead of grinding for a virtual one.",
+    roastLine: "You'd be selling houses while other people grind for virtual ones.",
   },
   {
     id: "personal-trainer-cert",
@@ -325,7 +325,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 110,
     category: "career",
     icon: "✈️",
-    roastLine: "Fly an actual plane instead of pretending in MSFS.",
+    roastLine: "Flight Sim was just the tutorial. 110 hours and you'd have the real license.",
   },
   {
     id: "youtube-channel",
@@ -333,7 +333,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 500,
     category: "career",
     icon: "📺",
-    roastLine: "People would watch you ON PURPOSE instead of in a death recap.",
+    roastLine: "People would watch you ON PURPOSE. Not just in a death recap.",
   },
   {
     id: "startup",
@@ -341,7 +341,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 1000,
     category: "career",
     icon: "🚀",
-    roastLine: "Build something people pay for instead of something you pay for.",
+    roastLine: "1,000 hours building something. By now someone might be paying you for it.",
   },
   {
     id: "emt-cert",
@@ -349,7 +349,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 200,
     category: "career",
     icon: "🚑",
-    roastLine: "Save actual lives instead of feeding in ranked.",
+    roastLine: "You feed in ranked every night. As an EMT at least the feeding saves someone.",
   },
   {
     id: "stock-trading",
@@ -357,7 +357,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 300,
     category: "career",
     icon: "📊",
-    roastLine: "Gamble on the stock market instead. At least it pays dividends.",
+    roastLine: "Gamble on the stock market. At least that pays dividends.",
   },
 
   // ── EDUCATION ───────────────────────────────────
@@ -375,7 +375,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 100,
     category: "education",
     icon: "🌍",
-    roastLine: "Navigate 5 countries vs. navigate 5 maps. One is more useful.",
+    roastLine: "You've memorized every callout on Dust2 but couldn't navigate a foreign subway.",
   },
   {
     id: "speed-reading",
@@ -383,7 +383,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 40,
     category: "education",
     icon: "📖",
-    roastLine: "Read patch notes faster. Or, y'know, actual books.",
+    roastLine: "You read patch notes the day they drop. Imagine that energy on books.",
   },
   {
     id: "astronomy",
@@ -399,7 +399,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 100,
     category: "education",
     icon: "📈",
-    roastLine: "Your actual money could've been growing this whole time.",
+    roastLine: "Your money's been sitting there doing nothing. Kind of like your duo in lane.",
   },
   {
     id: "philosophy",
@@ -407,7 +407,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 300,
     category: "education",
     icon: "🏛️",
-    roastLine: "Ponder the meaning of life instead of the meaning of your rank.",
+    roastLine: "Socrates didn't know his MMR and seemed pretty content about it.",
   },
   {
     id: "data-science",
@@ -423,7 +423,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 400,
     category: "education",
     icon: "📜",
-    roastLine: "Know about actual wars instead of just digital ones.",
+    roastLine: "You know every Civilization tech tree by heart. The real history is wilder.",
   },
   {
     id: "math-mastery",
@@ -441,7 +441,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 350,
     category: "creative",
     icon: "👨‍🍳",
-    roastLine: "Gordon Ramsay is disappointed. Your microwave is not.",
+    roastLine: "Gordon Ramsay would be disappointed. Your microwave is thriving though.",
   },
   {
     id: "write-novel",
@@ -465,7 +465,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 400,
     category: "creative",
     icon: "🎧",
-    roastLine: "Drop a beat instead of dropping rank.",
+    roastLine: "You've got the taste already. 400 hours and you'd be the one making it.",
   },
   {
     id: "film-short",
@@ -473,7 +473,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 200,
     category: "creative",
     icon: "🎬",
-    roastLine: "Direct something people actually want to watch.",
+    roastLine: "Direct something people would watch on purpose.",
   },
   {
     id: "sourdough",
@@ -481,7 +481,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 50,
     category: "creative",
     icon: "🍞",
-    roastLine: "Feed your starter, not your addiction.",
+    roastLine: "50 hours and you'd be pulling fresh bread out of the oven. Your microwave feels threatened.",
   },
   {
     id: "baking",
@@ -489,7 +489,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 250,
     category: "creative",
     icon: "🧁",
-    roastLine: "Nobody at a dinner party has ever asked about your rank badge.",
+    roastLine: "Nobody at a dinner party has ever asked about your rank. They would ask about your cake though.",
   },
   {
     id: "tattooing",
@@ -505,7 +505,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 400,
     category: "creative",
     icon: "🎞️",
-    roastLine: "Your characters could live. On your terms.",
+    roastLine: "400 hours and your characters would be moving on screen. Ones you designed yourself.",
   },
   {
     id: "leatherworking",
@@ -513,7 +513,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 150,
     category: "creative",
     icon: "👜",
-    roastLine: "A handmade leather wallet beats a legendary drop. Fight me.",
+    roastLine: "You'd be making wallets and bags that last longer than any skin you've bought.",
   },
   {
     id: "graphic-design",
@@ -521,7 +521,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 400,
     category: "creative",
     icon: "🎨",
-    roastLine: "People pay real money for good design. Just saying.",
+    roastLine: "400 hours of design and people start paying you for it. Weird how that works.",
   },
   {
     id: "singing",
@@ -529,7 +529,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 200,
     category: "creative",
     icon: "🎵",
-    roastLine: "Same energy as yelling callouts. Way better reception.",
+    roastLine: "You've been projecting your voice in comms for years. Might as well sound good doing it.",
   },
 
   // ── SOCIAL & ADVENTURE ──────────────────────────
@@ -539,7 +539,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 500,
     category: "social",
     icon: "❤️",
-    roastLine: "Swiping, matching, chatting, actual dates — the full grind. Still less toxic than ranked.",
+    roastLine: "500 hours of putting yourself out there. Statistically you'd have found someone. Less toxic than solo queue, too.",
   },
   {
     id: "volunteer",
@@ -547,7 +547,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 200,
     category: "social",
     icon: "🤝",
-    roastLine: "Make the world better instead of making your team worse.",
+    roastLine: "200 hours helping people. Your teammates would've loved that energy.",
   },
   {
     id: "travel-backpack",
@@ -555,7 +555,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 800,
     category: "adventure",
     icon: "🎒",
-    roastLine: "Explore actual open worlds.",
+    roastLine: "800 hours of open world games and you've never seen the Andes.",
   },
   {
     id: "skydiving-cert",
@@ -563,7 +563,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 30,
     category: "adventure",
     icon: "🪂",
-    roastLine: "Real adrenaline > ranked anxiety.",
+    roastLine: "30 hours and you're literally falling from the sky. Ranked never got your heart rate this high.",
   },
   {
     id: "surf",
@@ -571,7 +571,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 80,
     category: "adventure",
     icon: "🏄",
-    roastLine: "Ride waves, not losing streaks.",
+    roastLine: "80 hours in the ocean catching waves. Better than catching Ls.",
   },
   {
     id: "rock-climbing",
@@ -579,7 +579,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 200,
     category: "adventure",
     icon: "🧗",
-    roastLine: "Climb actual ranks. Made of rock.",
+    roastLine: "Your hands grip a mouse 8 hours a day. They'd do just fine on a cliff face.",
   },
   {
     id: "dog-training",
@@ -603,7 +603,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 100,
     category: "social",
     icon: "🌱",
-    roastLine: "Grow something real instead of your hours played.",
+    roastLine: "Your garden would be thriving by now. It'd outlast your rank, too.",
   },
   {
     id: "snowboarding",
@@ -619,7 +619,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 200,
     category: "adventure",
     icon: "🐠",
-    roastLine: "Discover actual underwater maps. No respawns though.",
+    roastLine: "20 dive sites around the world. The draw distance is unreal.",
   },
   {
     id: "road-trip",
@@ -627,7 +627,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 150,
     category: "adventure",
     icon: "🛣️",
-    roastLine: "Open road > open mid.",
+    roastLine: "Thousands of miles of highway and nobody pinging you to group up.",
   },
   {
     id: "camping-survival",
@@ -643,7 +643,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 150,
     category: "social",
     icon: "💃",
-    roastLine: "Move your body instead of just your mouse.",
+    roastLine: "Your wrist already has the coordination. The rest of your body just needs to catch up.",
   },
   {
     id: "podcast",
@@ -651,7 +651,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 300,
     category: "social",
     icon: "🎙️",
-    roastLine: "People would listen to you on purpose. Novel concept.",
+    roastLine: "You already talk into a mic about stuff you care about. You do it in Discord every night.",
   },
   {
     id: "mentor",
@@ -659,7 +659,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 200,
     category: "social",
     icon: "🧑‍🏫",
-    roastLine: "Coach actual humans instead of backseat gaming.",
+    roastLine: "You've been telling people what to do in games for years. Someone might as well pay you for it.",
   },
   {
     id: "paragliding",
@@ -667,7 +667,7 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 60,
     category: "adventure",
     icon: "🪁",
-    roastLine: "Way better adrenaline than screaming about your Hanzo pick.",
+    roastLine: "60 hours strapped to a wing with nothing below you. Ranked anxiety was just practice.",
   },
   {
     id: "marathon-swimming",
@@ -675,6 +675,6 @@ export const ACHIEVEMENTS: AchievementMilestone[] = [
     hoursRequired: 300,
     category: "adventure",
     icon: "🌊",
-    roastLine: "Open water. No teammates. Just you and the current.",
+    roastLine: "300 hours in open water. No lanes, no team. Just you figuring it out.",
   },
 ];

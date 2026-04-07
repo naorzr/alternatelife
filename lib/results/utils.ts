@@ -28,14 +28,14 @@ export function greedyRandomFill(hours: number): AchievementMilestone[] {
 }
 
 export function getMasteryEstimate(hours: number): MasteryEstimate {
-  if (hours >= 10000) return { percentile: "0.1%", label: "WORLD CLASS", description: "10,000+ hours. People dedicate entire lives and don't always get here." };
-  if (hours >= 5000) return { percentile: "1%", label: "EXPERT", description: "Better than 99 out of 100 people who ever tried. Not a typo." };
-  if (hours >= 3000) return { percentile: "2%", label: "HIGHLY SKILLED", description: "Good enough that people would pay you for it." };
-  if (hours >= 2000) return { percentile: "5%", label: "ADVANCED", description: "Years ahead of most. Teaching-level, not student-level." };
-  if (hours >= 1000) return { percentile: "10%", label: "PROFICIENT", description: "The kind of skilled where people stop and watch." };
-  if (hours >= 500) return { percentile: "15%", label: "COMPETENT", description: "Not beginner luck, not natural talent. Earned." };
-  if (hours >= 200) return { percentile: "25%", label: "CAPABLE", description: "Past the awkward phase. Enough to surprise yourself." };
-  return { percentile: "30%", label: "STARTED", description: "The boring-but-important foundations most people skip." };
+  if (hours >= 10000) return { percentile: "0.1%", label: "WORLD CLASS", description: "10,000 hours of anything. That's a full career of practice." };
+  if (hours >= 5000) return { percentile: "1%", label: "EXPERT", description: "Better than 99 out of 100 people who ever picked this up." };
+  if (hours >= 3000) return { percentile: "2%", label: "HIGHLY SKILLED", description: "Good enough that strangers would pay you for it." };
+  if (hours >= 2000) return { percentile: "5%", label: "ADVANCED", description: "Years ahead of most. You could teach a class on this." };
+  if (hours >= 1000) return { percentile: "10%", label: "PROFICIENT", description: "Good enough that people stop what they're doing to watch." };
+  if (hours >= 500) return { percentile: "15%", label: "COMPETENT", description: "You know what you're doing and it shows." };
+  if (hours >= 200) return { percentile: "25%", label: "CAPABLE", description: "Past the awkward phase. Starting to surprise yourself." };
+  return { percentile: "30%", label: "STARTED", description: "Early days, but you showed up. Most people never do." };
 }
 
 export interface TimeComparison {
