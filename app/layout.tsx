@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Press_Start_2P, Space_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const pressStart2P = Press_Start_2P({
@@ -44,7 +45,10 @@ export default function RootLayout({
       lang="en"
       className={`${pressStart2P.variable} ${spaceMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
